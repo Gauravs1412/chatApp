@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign Up</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sign Up</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+    </div>
+    
+    <form onsubmit="signup(event)">
+
+       
+
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="enter name" name="name" required>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+
+        <label for="phone-number"><b>phone-number</b></label>
+        <input type="text" placeholder="phone-number" name="pn" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="enter password" name="psw" required>
+
+
+        <button type="button" class="cancelbtn" >Cancel</button>
+        <button type="submit" class="signupbtn" id="signup1">Sign up</button>
+
+        <p>By creating  an account you agree to our <a href="#"
+            style="color:dodgerblue" >Terms & Privacy</a></p>
+
+       
+    </form>
+
+   
+
+
+    
+
+   <script src="./signup.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js'></script>
+    
+</body>
+</html>
