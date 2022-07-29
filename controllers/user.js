@@ -79,3 +79,31 @@ exports.login = async(req,res) => {
     
         }
     }
+
+exports.getUser = async(req,res) =>{
+    try{
+
+        const users = await User.findAll()
+        // console.log(JSON.stringify(users[0].name))
+        // const obj = {
+
+        // }
+        
+
+        // for(let i=0; i<users.length; i++){
+
+        //     obj.push(JSON.stringify(users[i]))
+            
+        // }
+       
+
+        // console.log(obj)
+
+        // console.log(users[0].dataValues.name)
+        // const {name} = users
+        return res.status(200).json({users,success:true})
+
+    }catch(err){
+        console.log(err)
+    }
+}

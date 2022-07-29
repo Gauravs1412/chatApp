@@ -6,7 +6,7 @@ function login(event){
 
     const myobj = {
       email,
-    password
+      password
     }
 
     //console.log(name)
@@ -20,7 +20,7 @@ function login(event){
           const {token} = res.data
           localStorage.setItem("token",token);
           // localStorage.setItem('userDetails',json.stringify(res.data.user));
-          window.location.href = '../Expense/index.html'
+          window.location.href = 'chat.html'
           //alert('succesfully signed up')
   
 
