@@ -5,14 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
+    <link rel="stylesheet" href="chat.css">
 </head>
 <body>
 
-    <h1>Hello users</h1>
+    <h2 id="app">Chat App</h2>
 
     <div id="chat">
 
     </div>
+
+<footer>
+    <form onsubmit="sendMsg(event)">
+        <label for="msg"></label>
+        <input type="text" name="msg">
+        <button type="submit" >Send</button>
+    </form>
+</footer>
 
 
 

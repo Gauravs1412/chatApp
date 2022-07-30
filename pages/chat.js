@@ -39,9 +39,30 @@ function showUsers(data){
 
       <li>
       ${data.name}
-      
       </li>
-    
-    `
+      `
+      
+     
 
 }
+
+
+async function sendMsg(event){
+    event.preventDefault();
+    const msg = event.target.msg.value
+
+    const obj = {msg}
+
+    const token = localStorage.getItem('token')
+
+
+    const response = await axios.post('http://localhost:3000/user/message',obj,{headers:{"Authorization":token}})
+    console.log(response)
+
+     
+
+    // console.log(msg)
+    
+}
+
+
