@@ -13,6 +13,8 @@ exports.message = async(req,res) => {
 
         const User = req.user;
 
+        const {name} = User
+
         const createmessage = await User.createMessage({
             message:msg
 
@@ -22,11 +24,24 @@ exports.message = async(req,res) => {
 
         return res.status(201).json({msg:"message created succesfully",
     
-    createmessage});
+   name});
 
 
     }catch(err){
         console.log(err);
         return res.json({msg:"kuch error hai message.js me"})
     }
+}
+
+
+exports.getmessage = async(req,res) => {
+
+    const {name} = req.user
+
+    const msg = await req.user.getMessages()
+
+    // console.log(msg)
+
+    res.status(200).json({msg,name,success:true})
+
 }
